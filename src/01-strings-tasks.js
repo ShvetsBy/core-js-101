@@ -80,8 +80,8 @@ function extractNameFromTemplate(value) {
  *   'John Doe'  => 'J'
  *   'cat'       => 'c'
  */
-function getFirstChar(/* value */) {
-  throw new Error('Not implemented');
+function getFirstChar(value) {
+  return value.charAt(0);
 }
 
 /**
@@ -95,8 +95,8 @@ function getFirstChar(/* value */) {
  *   'cat'              => 'cat'
  *   '\tHello, World! ' => 'Hello, World!'
  */
-function removeLeadingAndTrailingWhitespaces(/* value */) {
-  throw new Error('Not implemented');
+function removeLeadingAndTrailingWhitespaces(value) {
+  return value.replace(/^(\s)*/, '').replace(/(\s)*$/, '');
 }
 
 /**
@@ -202,10 +202,15 @@ function extractEmails(/* str */) {
  *             '└──────────┘\n'
  *
  */
-function getRectangleString(/* width, height */) {
-  throw new Error('Not implemented');
-}
 
+function getRectangleString(width, height) {
+  const dash = '─';
+  const space = ' ';
+  const firstLine = `┌${dash.repeat(width - 2)}┐\n`;
+  const fill = `│${space.repeat(width - 2)}│\n`;
+  const lastLine = `└${dash.repeat(width - 2)}┘\n`;
+  return firstLine + fill.repeat(height - 2) + lastLine;
+}
 
 /**
  * Encode specified string with ROT13 cipher
