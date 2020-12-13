@@ -41,7 +41,6 @@ function generateOdds(len) {
   return arr.map((item, index) => index * 2 + 1);
 }
 
-
 /**
  * Returns the doubled array - elements of the specified array
  * are repeated twice using original order
@@ -57,7 +56,6 @@ function generateOdds(len) {
 function doubleArray(arr) {
   return arr.concat(arr);
 }
-
 
 /**
  * Returns an array of positive numbers from the specified array in original order
@@ -166,7 +164,6 @@ function getHead(arr, n) {
   return arr.slice(0, n);
 }
 
-
 /**
  * Returns the n last items of the specified array
  *
@@ -180,7 +177,6 @@ function getHead(arr, n) {
 function getTail(arr, n) {
   return arr.reverse().slice(0, n).reverse();
 }
-
 
 /**
  * Returns CSV represebtation of two-dimentional numeric array.
@@ -221,7 +217,6 @@ function toArrayOfSquares(arr) {
   return arr.map((number) => number ** 2);
 }
 
-
 /**
  * Transforms the numeric array to the according moving sum array:
  *     f[n] = x[0] + x[1] + x[2] +...+ x[n]
@@ -261,7 +256,6 @@ function getSecondItems(arr) {
   return arr.filter((item, index) => index % 2);
 }
 
-
 /**
  * Propagates every item in sequence its position times
  * Returns an array that consists of: one first item, two second items, tree third items etc.
@@ -288,7 +282,6 @@ function propagateItemsByPositionIndex(arr) {
   return resultArr;
 }
 
-
 /**
  * Returns the 3 largest numbers from the specified array
  *
@@ -305,7 +298,6 @@ function propagateItemsByPositionIndex(arr) {
 function get3TopItems(arr) {
   return arr.sort((a, b) => a - b).reverse().slice(0, 3);
 }
-
 
 /**
  * Returns the number of positive numbers from specified array
@@ -408,7 +400,6 @@ function findAllOccurences(arr, item) {
 function toStringList(arr) {
   return arr.join(',');
 }
-
 
 /**
  * Sorts the specified array by country name first and city name
@@ -536,8 +527,8 @@ function distinct(arr) {
  *    "Poland" => ["Lodz"]
  *   }
  */
-function group(array, keySelector, valueSelector) {
-  
+function group(/* array, keySelector, valueSelector */) {
+  throw new Error('Not implemented');
 }
 
 
