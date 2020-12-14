@@ -80,6 +80,7 @@ function getFastestPromise(array) {
   return Promise.race(array);
 }
 
+
 /**
  * Return Promise object that should be resolved with value that is
  * a result of action with values of all the promises that exists in array.
